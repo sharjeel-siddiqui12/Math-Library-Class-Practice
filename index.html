@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Library</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.2.1/math.js"
+        integrity="sha512-47N5yVdAeXJ+9qstVMTH2Z0EpX618sjYZcswRwhpldSTD0IbW6yQPtzg4RLrPp/2+TIgEF1elT68/ZBu82nqJA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <!-- //////////////////////////////////////////////////////// -->
+    <h1>Calculating Log</h1>
+    <form onsubmit="calcLog() ;return false">
+        <input type="number" id="input" placeholder="Enter a value">
+
+        <button type="submit">Log2</button>
+
+
+    </form>
+
+    <div id="result"></div>
+
+    <!-- //////////////////////////////////////////////// -->
+
+    <h1>Calculating Square root</h1>
+    <form onsubmit="sqrt() ;return false">
+        <input type="number" id="inputSqrt" placeholder="Enter a value">
+
+        <button type="submit">Square Root</button>
+
+
+    </form>
+    <div id="resultSqrt"></div>
+    <!-- ////////////////////////////////////////////////// -->
+
+    <h1>Calculating Square</h1>
+    <form onsubmit="sqr() ;return false">
+        <input type="number" id="inputSqr" placeholder="Enter a value">
+
+        <button type="submit">Square</button>
+
+
+    </form>
+    <div id="resultSqr"></div>
+
+    <!-- //////////////////////////////////////////////////////// -->
+
+    <script>
+
+    /////////////////////////////////////////////////    // 
+    let calcLog = () => {
+        let input = +document.querySelector("#input").value;
+
+        let result = math.log(input , 2);
+
+        document.querySelector("#result").innerHTML = result
+    }
+    // /////////////////////////////////////////////////////////
+    let sqrt = () => {
+        let input1 = +document.querySelector("#inputSqrt").value;
+
+        let result1 = math.sqrt(input1)
+
+        document.querySelector("#resultSqrt").innerHTML = result1
+    }
+    // /////////////////////////////////////////////////////////
+
+    let sqr = () => {
+        let input1 = +document.querySelector("#inputSqr").value;
+
+        let result1 = math.square(input1)
+
+        document.querySelector("#resultSqr").innerHTML = result1
+    }
+
+    // ////////////////////////////////////////////////////////
+    
+</script>
+</body>
+</html>
